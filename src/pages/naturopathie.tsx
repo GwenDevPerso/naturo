@@ -1,43 +1,10 @@
 import CTAButton from '@/components/call-to-action/call-to-action.component';
 import TextCard from '@/components/card/text-card/text-card.component';
-import {HomeModernIcon} from '@heroicons/react/16/solid';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/naturo.module.scss';
 
 export default function NaturopathiePage() {
-    const items = [
-        {
-            text: 'Découvrir le POUVOIR de notre esprit sur le corps',
-            icon: HomeModernIcon,
-        },
-        {
-            text: 'Retrouver sa sérénité',
-            icon: '/fleur-rouge.png',
-        },
-        {
-            text: 'Comprendre la maladie pour aider son corps a retrouver la santé',
-            icon: '/fleur-rouge.png',
-        },
-        {
-            text: 'Détoxifier son corps',
-            icon: '/fleur-rouge.png',
-        },
-        {
-            text: "Refaire le plein d’'énergie",
-            icon: '/fleur-rouge.png',
-        },
-        {
-            text: "Découvrir l'alimentation vivante physiologique",
-            icon: '/fleur-rouge.png',
-        },
-
-        {
-            text: "Retrouver ses capacités d'auto-guérison",
-            icon: '/fleur-rouge.png',
-        },
-    ]; // Contenu dynamique des cercles
-
     return (
         <div className="page">
             <Head>

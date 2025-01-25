@@ -17,7 +17,7 @@ install:
     stage: install
     image: node:20 # Image Node.js
     script:
-        - yarn install
+        - npm install
     artifacts:
         paths:
             - node_modules/
@@ -28,8 +28,8 @@ build:
     stage: build
     image: node:20
     script:
-        - yarn install # Assure-toi que tout est installé
-        - yarn build
+        - npm install # Assure-toi que tout est installé
+        - npm build
     artifacts:
         paths:
             - .next
@@ -45,6 +45,6 @@ deploy:
         - ssh-add <(echo "$SSH_PRIVATE_KEY")
         - ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts
         - rsync -avz --delete .next/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/.next/
-        - ssh $DEPLOY_USER@$DEPLOY_HOST "cd $DEPLOY_PATH && yarn install --production && pm2 restart ecosystem.config.js"
+        - ssh $DEPLOY_USER@$DEPLOY_HOST "cd $DEPLOY_PATH && npm install --production && pm2 restart ecosystem.config.js"
     only:
         - main

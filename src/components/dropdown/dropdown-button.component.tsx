@@ -4,7 +4,7 @@ import {useEffect, useRef, useState} from 'react';
 import {Tab} from '../tabs/tab.type';
 import styles from './styles.module.scss';
 
-const DropdownButton = ({onEvent}: {onEvent: any}) => {
+const DropdownButton = ({onEvent}: {onEvent: any;}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const tabs: Tab[] = [

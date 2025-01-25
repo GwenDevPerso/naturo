@@ -1,13 +1,13 @@
 'use client';
 // import emailjs from '@emailjs/browser';
 import {HomeModernIcon, PhoneIcon} from '@heroicons/react/16/solid';
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import styles from './styles.module.scss';
 
 const ContactForm = () => {
     const form = useRef<HTMLFormElement>(null);
-    const [success, setSuccess] = useState<string | null>(null);
-    const [error, setError] = useState<string | null>(null);
+    // const [success, setSuccess] = useState<string | null>(null);
+    // const [error, setError] = useState<string | null>(null);
 
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
@@ -71,8 +71,8 @@ const ContactForm = () => {
                             Envoyer
                         </button>
                     </div>
-                    {success && <p className={styles['success-message']}>{success}</p>}
-                    {error && <p className={styles['error-message']}>{error}</p>}
+                    {/* {success && <p className={styles['success-message']}>{success}</p>}
+                    {error && <p className={styles['error-message']}>{error}</p>} */}
                 </form>
             </div>
             <div className={`col ${styles.text}`}>
