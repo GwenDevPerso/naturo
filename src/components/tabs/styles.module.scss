@@ -1,0 +1,155 @@
+.tabs-container {
+    background: var(--main-theme);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+
+    .only-phone {
+        display: none;
+
+        .burger-button {
+            position: relative;
+            width: 40px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            span {
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color: #333;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            &.open span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            &.open span:nth-child(2) {
+                opacity: 0;
+            }
+
+            &.open span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+    }
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        color: var(--text-dark);
+        .tab {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0px 20px;
+            font-family: var(--font-oregano-regular);
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-size 0.5s ease; /* Transition lente */
+            background-image: url('/fleur-rouge.png');
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: 20px auto;
+            font-weight: 900;
+
+            &.active {
+                background-image: url('/fleur-rouge.png');
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: 20px auto;
+                font-weight: 900;
+            }
+
+            &:hover {
+                opacity: 0.8;
+                background-image: url('/fleur-rouge.png');
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: 30%; /* Agrandit légèrement l'image */
+            }
+        }
+
+        .tab:last-child {
+            border-right: none;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .tabs-container {
+        .tabs {
+            gap: 70px;
+
+            .tab {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs-container {
+        height: 50px;
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 20px;
+        flex-direction: row;
+        border-radius: 0;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); // Ombre subtile
+        .only-phone {
+            display: block;
+        }
+
+        .tabs {
+            z-index: 100;
+            position: absolute;
+            flex-direction: column;
+            height: 250px;
+            justify-content: flex-start;
+            background-color: var(--background);
+            top: 50px;
+            left: 0;
+            gap: 0;
+
+            &.only-phone-display {
+                display: flex;
+            }
+
+            &.only-phone-hidden {
+                display: none;
+            }
+
+            .tab {
+                padding: 5px 20px;
+                font-size: 20px;
+                width: 100%;
+                justify-content: flex-start;
+                box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); // Ombre subtile
+                .tab-button {
+                    padding-right: 25px;
+                    width: 100%;
+                }
+            }
+
+            &.phone {
+                background-color: red;
+            }
+        }
+    }
+}

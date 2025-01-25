@@ -1,0 +1,56 @@
+.circle-navbar {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .nav-item {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        max-width: 100px;
+        max-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem;
+        transition: all 0.3s cubic-bezier(0.53, -0.67, 0.73, 0.74);
+
+        /* Calcul du positionnement circulaire dynamique */
+        &:nth-child(n) {
+            transform: rotate(calc(360deg / var(--item-total) * (var(--item-index) - 1))) translateY(-150px);
+        }
+    }
+
+    /* Effet au survol */
+    .nav-item:hover {
+        background: #d1f4ff;
+        margin-bottom: 10px;
+        width: 90px;
+        height: 90px;
+        // transition: all 0.3s ease-in-out;
+        // transform: translateY(calc(8px * -1));
+    }
+    .selected-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+        text-align: center;
+        // display: none; /* Caché par défaut */
+    }
+}

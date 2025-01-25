@@ -1,0 +1,14 @@
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 100px;
+    .header-item {
+        display: flex;
+        justify-content: center;
+        img {
+            border-radius: 50%;
+        }
+    }
+}

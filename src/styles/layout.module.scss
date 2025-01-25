@@ -1,0 +1,72 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .title {
+            width: 300px;
+            font-size: 70px;
+        }
+    }
+}
+
+.footer {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    .links {
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        font-family: var(--font-oregano-regular);
+        font-size: 20px;
+        .link {
+            color: #000;
+            text-decoration: none;
+            padding: 0 25px;
+            &:hover {
+                color: var(--text-main);
+                background-image: url('/fleur-rouge.png');
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: 20px auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .footer {
+        height: 100px;
+        .links {
+            padding: 10px 0px;
+            font-family: var(--font-oregano-regular);
+            font-size: 12px;
+            .link {
+                color: #000;
+                text-decoration: none;
+                padding: 0 10px;
+            }
+        }
+    }
+}

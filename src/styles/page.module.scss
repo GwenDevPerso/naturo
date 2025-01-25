@@ -1,0 +1,65 @@
+.main-header {
+    height: 500px;
+    width: 80vw; // Prend toute la largeur de la fenêtre
+    background: url('/jardin2.jpg') center / cover no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .main-header-content {
+        height: 80%;
+        width: 40%;
+        background-color: #e1d0a7bb;
+        border-radius: 20px;
+        #citation {
+            font-size: 40px;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+            font-family: var(--font-oregano-regular);
+        }
+        #auteur {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+            width: 100%;
+            padding: 20px;
+        }
+    }
+}
+
+.content {
+    background: var(--background);
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.activity-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.caroussel {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .caroussel {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,73 @@
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &.primary {
+        background-color: #007bff;
+        color: white;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    &.secondary {
+        background-color: #6c757d;
+        color: white;
+
+        &:hover {
+            background-color: #545b62;
+        }
+    }
+
+    &.small {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    &.medium {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    &.large {
+        font-size: 10px;
+        padding: 15px;
+    }
+
+    .icon {
+        display: inline-flex;
+        margin-right: 0.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .ctaButton {
+        &.small {
+            font-size: 10px;
+            padding: 10px 5px;
+        }
+
+        &.medium {
+            font-size: 12px;
+            padding: 10px 5px;
+        }
+
+        &.large {
+            font-size: 10px;
+            padding: 10px 5px;
+        }
+    }
+}

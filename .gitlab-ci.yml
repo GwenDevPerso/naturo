@@ -1,0 +1,50 @@
+stages:
+    - install
+    - build
+    - deploy
+
+# Variables globales
+variables:
+    NODE_ENV: production
+
+cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+        - node_modules/
+
+# Étape 1 : Installation des dépendances
+install:
+    stage: install
+    image: node:20 # Image Node.js
+    script:
+        - yarn install
+    artifacts:
+        paths:
+            - node_modules/
+        expire_in: 1h
+
+# Étape 2 : Build du projet Next.js
+build:
+    stage: build
+    image: node:20
+    script:
+        - yarn install # Assure-toi que tout est installé
+        - yarn build
+    artifacts:
+        paths:
+            - .next
+        expire_in: 1h
+
+# Étape 3 : Déploiement sur le serveur
+deploy:
+    stage: deploy
+    image: alpine:latest
+    before_script:
+        - apk add --no-cache openssh
+    script:
+        - ssh-add <(echo "$SSH_PRIVATE_KEY")
+        - ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts
+        - rsync -avz --delete .next/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/.next/
+        - ssh $DEPLOY_USER@$DEPLOY_HOST "cd $DEPLOY_PATH && yarn install --production && pm2 restart ecosystem.config.js"
+    only:
+        - main

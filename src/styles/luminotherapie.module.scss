@@ -1,0 +1,49 @@
+.header {
+    position: relative;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    color: var(--text-white);
+    display: flex;
+    overflow: hidden; /* Empêche le contenu de dépasser la div */
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/massages/bougie.jpg');
+    background-size: cover; /* Ajuste la taille de l'image */
+    background-position: center; /* Centre l'image */
+    // filter: blur(6px); /* Ajoute un flou de 8px */
+    z-index: -1; /* Place le pseudo-élément derrière le contenu */
+}
+
+.header2 {
+    position: relative;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    color: var(--text-white);
+    display: flex;
+    overflow: hidden; /* Empêche le contenu de dépasser la div */
+}
+
+.header2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/quinton.jpg');
+    background-size: cover; /* Ajuste la taille de l'image */
+    background-position: center; /* Centre l'image */
+    // filter: blur(6px); /* Ajoute un flou de 8px */
+    z-index: -1; /* Place le pseudo-élément derrière le contenu */
+}

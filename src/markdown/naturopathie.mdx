@@ -1,0 +1,105 @@
+import CTAButton from '@/components/call-to-action/call-to-action.component';
+import ImageCard from '@/components/card/image-card/image-card.component';
+import TextCard from '@/components/card/text-card/text-card.component';
+import GridItem from '@/components/grid/grid-item/grid-item.component';
+import Row from '@/components/grid/row/row.component';
+import Header2Col from '@/components/header2Col/header-2-col.component';
+import Separator from '@/components/separator/separator.component';
+import Image from 'next/image';
+
+
+<Row>
+    <GridItem style={{
+        width: '45%',
+        height: '100%',
+    }}>
+        <ImageCard>
+            <Image src="/naturo/miel.jpg" alt="next" width={400} height={300} />
+            Mon approche de la naturopathie est une approche holistique et complémentaire de la médecine traditionnelle.<br/><br/>
+            Je prends la personne en charge dans sa globalité, dans un but préventif afin de procurer ou retrouver le meilleur équilibre pour votre organisme.
+        </ImageCard>
+    </GridItem>
+    {/* <Separator src="/fleur-jaune.png" position='center top' repeat='repeat-y' bgSize='25px' imageTop='-70px'/> */}
+    <GridItem style={{
+        width: '45%',
+        height: '100%',
+    }}>
+        <TextCard>
+## Mon approche de la naturopathie
+        </TextCard>
+    </GridItem>
+</Row>
+
+<Row>
+    <GridItem style={{
+        width: '45%',
+        height: '100%',
+    }}>
+        <TextCard>
+## Plus concretement ca donne quoi ?
+        <CTAButton color="secondary" size="medium" text="Contact" href="/contact"></CTAButton>
+        </TextCard>
+    </GridItem>
+     <GridItem style={{
+        width: '45%',
+        height: '100%',
+    }}>
+        <ImageCard>
+            <Image src="/naturo/menthe.jpg" alt="next" width={400} height={300} />
+            <div>
+            Cette approche se fait en plusieurs temps :<br/><br/>
+            Lors d’une première consultation, mon travail avec vous consistera à aborder différents aspects de votre vie quotidienne afin de définir ensemble vos besoins.<br/><br/>
+            Cet entretien permet d’évaluer vos habitudes de vie, vos antécédents, votre ’alimentation, ainsi que l’observation de vos bilans biologiques.
+            Tout ceci dans le but de définir la cause du ou des problèmes, pour agir sur celui-ci.<br/><br/>
+            La base de travail en naturopathie passe bien souvent par un rééquilibrage alimentaire : nous adopterons ensemble vos besoins réels sans régime particulier, afin que l’organisme soit plus réceptif au travail que nous ferons avec les plantes.
+            </div>
+        </ImageCard>
+    </GridItem>
+</Row>
+
+
+<Row>
+    <GridItem style={{
+        width: '45%',
+        height: '100%',
+    }}>
+        <ImageCard>
+            <Image src="/naturo/paquerette.jpg" alt="next" width={400} height={300} />
+           Les consultations suivantes permettent un travail plus en profondeur en fonction de votre ressenti. Il sera possible de compléter la prise en charge par des techniques complémentaires. (nutrition, relaxation, massage, phytothérapie, aromathérapie…).<br/><br/>
+            En prenant en main votre santé de façon préventive, vous mettez toutes les chances de votre côté pour renforcer votre capacité à vivre en pleine santé.
+        </ImageCard>
+    </GridItem>
+    <GridItem style={{
+        width: '45%',
+        height: '100%',
+    }}>
+        <TextCard>
+## Je propose différentes consultations
+        <CTAButton color="secondary" size="medium" text="Contact" href="/contact"></CTAButton>
+        </TextCard>
+    </GridItem>
+</Row>
+
+<Row>
+    <GridItem style={{
+        width: '45%',
+        height: '100%',
+    }}>
+        <TextCard>
+## Une sécurité optimale grâce aux laboratoires
+        <CTAButton color="secondary" size="medium" text="Contact" href="/contact"></CTAButton>
+
+        </TextCard>
+    </GridItem>
+    <GridItem style={{
+        width: '45%',
+        height: '100%',
+    }}>
+        <ImageCard>
+            <Image src="/naturo/valeriane.jpg" alt="next" width={400} height={300} />
+             Pour une sécurité optimale dans la prise des plantes, je travaille avec différents laboratoires de confiance.<br/><br/>
+            Rappel : la naturopathie est une approche complémentaire. Elle ne remplace en aucun cas votre suivi médical par votre médecin traitant ou un spécialiste.
+        </ImageCard>
+    </GridItem>
+</Row>
+

@@ -1,0 +1,23 @@
+.content {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.image {
+    width: 200px; /* Définissez la taille de l'image */
+    height: 200px; /* La même taille pour l'hauteur */
+    border-radius: 50%; /* Rend l'image circulaire */
+    object-fit: cover; /* S'assure que l'image couvre l'espace sans déformer */
+}
+
+.container-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20vw;
+}
